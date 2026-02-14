@@ -30,3 +30,16 @@ installers/
 *.0002.rvt
 *.0003.rvt
 *.bak
+
+# Cloned repos (setup.sh clones these automatically)
+revit-mcp/
+revit-mcp-plugin/
+revit-mcp-commandset/
+
+# Presentation build artifacts (keep only the PPTX)
+presentation/node_modules/
+presentation/assets/
+presentation/slides/
+presentation/package.json
+presentation/package-lock.json
+presentation/generate-slides.js
