@@ -164,6 +164,21 @@ Revit-MCP/
 └── presentation/               # Presentation slides
 ```
 
+## Presentation
+
+The presentation is at `presentation/Revit-MCP-Presentation.pptx` and covers:
+- Problem: Why natural language building design matters
+- Solution: How Claude Code + MCP + Revit works together
+- BIM: What is Building Information Modeling
+- Parametric Modeling: How Revit's smart objects work
+- Architecture: How the TCP bridge connects WSL2 to Windows
+- MCP: Model Context Protocol explained
+- Demo Results: "The Prism" — A 3-story neo-futuristic building
+- Setup: One-command installation
+- Future Vision: Digital twins and AI-assisted design
+
+**Note:** Before presenting, add your phone number by editing the presentation slides 1 and 10 (replace "[Add Your Phone Here]")
+
 ## Credits
 
 - [mcp-servers-for-revit](https://github.com/mcp-servers-for-revit) - MCP Server, Plugin, and CommandSet
