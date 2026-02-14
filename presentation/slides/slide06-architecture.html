@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #0a0e27; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0; box-sizing: border-box;
+  background: #0a0e27;
+  font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+  padding: 30pt 35pt;
+}
+h2 {
+  color: #00d4ff;
+  font-size: 32pt;
+  margin: 0 0 3pt 0;
+}
+h3 {
+  color: #ffffff;
+  font-size: 16pt;
+  margin: 0 0 16pt 0;
+  opacity: 0.8;
+  font-weight: normal;
+}
+.diagram {
+  display: flex;
+  align-items: center;
+  gap: 6pt;
+  margin-bottom: 10pt;
+}
+.box {
+  flex: 1;
+  background: rgba(0, 212, 255, 0.12);
+  border: 2pt solid #00d4ff;
+  border-radius: 8pt;
+  padding: 14pt 8pt;
+  text-align: center;
+}
+.box-title {
+  color: #00d4ff;
+  font-size: 15pt;
+  font-weight: bold;
+  margin: 0 0 3pt 0;
+}
+.box-tech {
+  color: #b0b0b0;
+  font-size: 10pt;
+  margin: 0;
+}
+.arrow-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.arrow-col p {
+  color: #00d4ff;
+  font-size: 18pt;
+  font-weight: bold;
+  margin: 0;
+}
+.arrow-label {
+  color: #b0b0b0;
+  font-size: 8pt;
+  margin: 0;
+}
+.platforms {
+  display: flex;
+  gap: 8pt;
+  margin-bottom: 12pt;
+}
+.platform {
+  flex: 1;
+  text-align: center;
+}
+.platform-line {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4pt;
+  padding: 5pt 10pt;
+  display: inline-block;
+}
+.platform p {
+  color: #ffffff;
+  font-size: 11pt;
+  margin: 0;
+  opacity: 0.6;
+}
+.explanations {
+  display: flex;
+  gap: 8pt;
+}
+.explain {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8pt;
+  padding: 10pt;
+  border-top: 2pt solid #00d4ff;
+}
+.explain-num {
+  color: #00d4ff;
+  font-size: 10pt;
+  font-weight: bold;
+  margin: 0 0 3pt 0;
+}
+.explain p {
+  color: #b0b0b0;
+  font-size: 9pt;
+  margin: 0;
+  line-height: 1.3;
+}
+</style>
+</head>
+<body>
+<h2>System Architecture</h2>
+<h3>How Claude Code/Cowork Talks to Revit</h3>
+<div class="diagram">
+  <div class="box">
+    <p class="box-title">Claude Code/Cowork</p>
+    <p class="box-tech">AI Interface</p>
+  </div>
+  <div class="arrow-col">
+    <p class="arrow-label">MCP</p>
+    <p>&rarr;</p>
+  </div>
+  <div class="box">
+    <p class="box-title">MCP Server</p>
+    <p class="box-tech">Plugin</p>
+  </div>
+  <div class="arrow-col">
+    <p class="arrow-label">TCP :8080</p>
+    <p>&rarr;</p>
+  </div>
+  <div class="box">
+    <p class="box-title">Revit Plugin</p>
+    <p class="box-tech">C# Add-In</p>
+  </div>
+  <div class="arrow-col">
+    <p class="arrow-label">Revit API</p>
+    <p>&rarr;</p>
+  </div>
+  <div class="box">
+    <p class="box-title">Autodesk Revit</p>
+    <p class="box-tech">BIM Platform</p>
+  </div>
+</div>
+<div class="platforms">
+  <div class="platform" style="flex: 1;">
+    <div class="platform-line">
+      <p>All Running on Windows</p>
+    </div>
+  </div>
+</div>
+<div class="explanations">
+  <div class="explain">
+    <p class="explain-num">1. User Input</p>
+    <p>Describe what you want in natural language using Claude Code/Cowork</p>
+  </div>
+  <div class="explain">
+    <p class="explain-num">2. MCP Translation</p>
+    <p>The MCP plugin converts your request into structured Revit commands via Model Context Protocol</p>
+  </div>
+  <div class="explain">
+    <p class="explain-num">3. Command Relay</p>
+    <p>Commands are sent to the Revit plugin over TCP, bridging AI to the BIM application</p>
+  </div>
+  <div class="explain">
+    <p class="explain-num">4. BIM Execution</p>
+    <p>The C# plugin marshals commands to Revit's UI thread via ExternalEvent and creates BIM elements</p>
+  </div>
+</div>
+</body>
+</html>

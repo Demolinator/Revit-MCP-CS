@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #0a0e27; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0; box-sizing: border-box;
+  background: #0a0e27;
+  font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+  padding: 35pt 40pt;
+}
+h2 {
+  color: #00d4ff;
+  font-size: 34pt;
+  margin: 0 0 5pt 0;
+}
+h3 {
+  color: #ffffff;
+  font-size: 20pt;
+  margin: 0 0 22pt 0;
+  opacity: 0.8;
+  font-weight: normal;
+}
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.flow {
+  display: flex;
+  align-items: center;
+  gap: 10pt;
+  margin-bottom: 22pt;
+}
+.step {
+  background: rgba(0, 212, 255, 0.12);
+  border: 2pt solid #00d4ff;
+  border-radius: 10pt;
+  padding: 16pt 14pt;
+  text-align: center;
+  flex: 1;
+}
+.step-number {
+  color: #00d4ff;
+  font-size: 26pt;
+  font-weight: bold;
+  margin: 0;
+}
+.step-text {
+  color: #ffffff;
+  font-size: 13pt;
+  margin: 5pt 0 0 0;
+  opacity: 0.9;
+}
+.arrow {
+  color: #00d4ff;
+  font-size: 26pt;
+  margin: 0;
+}
+.benefits {
+  display: flex;
+  gap: 12pt;
+  margin-top: 8pt;
+}
+.benefit {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8pt;
+  padding: 14pt;
+  text-align: center;
+}
+.benefit p {
+  color: #ffffff;
+  font-size: 13pt;
+  margin: 0;
+  opacity: 0.85;
+}
+.benefit-label {
+  color: #00d4ff;
+  font-size: 14pt;
+  font-weight: bold;
+  margin: 0 0 4pt 0;
+}
+</style>
+</head>
+<body>
+<h2>The Solution</h2>
+<h3>Natural Language Building Design</h3>
+<div class="content">
+  <div class="flow">
+    <div class="step">
+      <p class="step-number">1</p>
+      <p class="step-text">Talk to Claude Code/Cowork in plain English</p>
+    </div>
+    <p class="arrow">&rarr;</p>
+    <div class="step">
+      <p class="step-number">2</p>
+      <p class="step-text">Claude sends commands to Revit via MCP</p>
+    </div>
+    <p class="arrow">&rarr;</p>
+    <div class="step">
+      <p class="step-number">3</p>
+      <p class="step-text">Walls, floors, grids, beams created in seconds</p>
+    </div>
+  </div>
+  <div class="benefits">
+    <div class="benefit">
+      <p class="benefit-label">Query</p>
+      <p>Model data instantly</p>
+    </div>
+    <div class="benefit">
+      <p class="benefit-label">Analyze</p>
+      <p>Statistics automatically</p>
+    </div>
+    <div class="benefit">
+      <p class="benefit-label">Export</p>
+      <p>Reports on demand</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

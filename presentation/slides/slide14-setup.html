@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #0a0e27; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0; box-sizing: border-box;
+  background: #0a0e27;
+  font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+  padding: 28pt 35pt;
+}
+h2 {
+  color: #00d4ff;
+  font-size: 30pt;
+  margin: 0 0 2pt 0;
+}
+h3 {
+  color: #ffffff;
+  font-size: 14pt;
+  margin: 0 0 10pt 0;
+  opacity: 0.8;
+  font-weight: normal;
+}
+.content {
+  flex: 1;
+  display: flex;
+  gap: 14pt;
+}
+.left { flex: 1.2; display: flex; flex-direction: column; gap: 8pt; }
+.right { flex: 0.8; display: flex; flex-direction: column; gap: 8pt; }
+.prereq-box {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8pt;
+  padding: 8pt 10pt;
+}
+.prereq-box h4 {
+  color: #00d4ff;
+  font-size: 12pt;
+  margin: 0 0 4pt 0;
+}
+.prereq-box p {
+  color: #b0b0b0;
+  font-size: 10pt;
+  margin: 0 0 2pt 0;
+  line-height: 1.3;
+}
+.code-box {
+  background: #0d1117;
+  border: 2pt solid #00d4ff;
+  border-radius: 8pt;
+  padding: 10pt;
+}
+.code-box p {
+  color: #00d4ff;
+  font-size: 10pt;
+  font-family: "Courier New", monospace;
+  margin: 0 0 3pt 0;
+  line-height: 1.4;
+}
+.steps-box {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8pt;
+  padding: 8pt 10pt;
+}
+.steps-box h4 {
+  color: #00d4ff;
+  font-size: 12pt;
+  margin: 0 0 4pt 0;
+}
+.steps-box p {
+  color: #b0b0b0;
+  font-size: 10pt;
+  margin: 0 0 3pt 0;
+  line-height: 1.3;
+}
+.github-box {
+  background: rgba(0, 212, 255, 0.1);
+  border: 2pt solid #00d4ff;
+  border-radius: 8pt;
+  padding: 10pt;
+}
+.github-box h4 {
+  color: #00d4ff;
+  font-size: 14pt;
+  margin: 0 0 4pt 0;
+}
+.github-box p {
+  color: #ffffff;
+  font-size: 10pt;
+  margin: 0 0 3pt 0;
+  line-height: 1.3;
+}
+.github-url {
+  color: #00d4ff;
+  font-size: 11pt;
+  font-weight: bold;
+  margin: 0 0 6pt 0;
+}
+</style>
+</head>
+<body>
+<h2>Setup Guide</h2>
+<h3>Everything You Need to Get Started</h3>
+<div class="content">
+  <div class="left">
+    <div class="prereq-box">
+      <h4>Prerequisites</h4>
+      <p><b>Windows 10/11</b> — Revit only runs on Windows</p>
+      <p><b>Autodesk Revit 2026</b> — Free trial at autodesk.com/revit</p>
+      <p><b>Node.js 18+</b> — For the MCP server plugin</p>
+      <p><b>Claude Code/Cowork</b> — Anthropic's AI interface</p>
+    </div>
+    <div class="code-box">
+      <p><b>$</b> git clone https://github.com/Demolinator/Revit-MCP-CS.git</p>
+      <p><b>$</b> cd Revit-MCP-CS</p>
+      <p><b>$</b> npm install && npm run setup</p>
+    </div>
+    <div class="steps-box">
+      <h4>Then Start Using:</h4>
+      <p><b>1.</b> Open Revit 2026 and create/open a project</p>
+      <p><b>2.</b> Go to <b>Add-Ins</b> tab, click <b>MCP Switch</b></p>
+      <p><b>3.</b> Open Claude Code/Cowork — ready to design!</p>
+    </div>
+  </div>
+  <div class="right">
+    <div class="github-box">
+      <h4>Try It Yourself!</h4>
+      <p class="github-url">github.com/Demolinator/Revit-MCP-CS</p>
+      <p>Complete setup guide with troubleshooting</p>
+      <p>19 pre-configured Revit commands</p>
+      <p>Works out of the box with Revit 2026</p>
+      <p>Designed for architects — no coding needed</p>
+    </div>
+    <div class="prereq-box">
+      <h4>Important Notes</h4>
+      <p>A Revit <b>project must be open</b> for commands to work</p>
+      <p>Click MCP Switch <b>once</b> to toggle ON (not double-click)</p>
+      <p>Setup script handles all config automatically</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

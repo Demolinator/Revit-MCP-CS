@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #0a0e27; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0; box-sizing: border-box;
+  background: #0a0e27;
+  font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+  padding: 28pt 35pt;
+}
+h2 {
+  color: #00d4ff;
+  font-size: 28pt;
+  margin: 0 0 2pt 0;
+}
+h3 {
+  color: #ffffff;
+  font-size: 14pt;
+  margin: 0 0 10pt 0;
+  opacity: 0.8;
+  font-weight: normal;
+}
+.comparison {
+  display: flex;
+  gap: 12pt;
+  margin-bottom: 10pt;
+}
+.cad-side {
+  flex: 1;
+  background: rgba(255, 80, 80, 0.08);
+  border: 2pt solid rgba(255, 80, 80, 0.4);
+  border-radius: 8pt;
+  padding: 10pt;
+}
+.cad-side h4 {
+  color: #ff5050;
+  font-size: 14pt;
+  margin: 0 0 6pt 0;
+}
+.cad-side p {
+  color: #b0b0b0;
+  font-size: 10pt;
+  margin: 0 0 4pt 0;
+  line-height: 1.3;
+}
+.bim-side {
+  flex: 1;
+  background: rgba(0, 212, 255, 0.08);
+  border: 2pt solid rgba(0, 212, 255, 0.4);
+  border-radius: 8pt;
+  padding: 10pt;
+}
+.bim-side h4 {
+  color: #00d4ff;
+  font-size: 14pt;
+  margin: 0 0 6pt 0;
+}
+.bim-side p {
+  color: #b0b0b0;
+  font-size: 10pt;
+  margin: 0 0 4pt 0;
+  line-height: 1.3;
+}
+.revolution {
+  background: rgba(0, 212, 255, 0.12);
+  border: 2pt solid #00d4ff;
+  border-radius: 8pt;
+  padding: 8pt 14pt;
+  margin-bottom: 8pt;
+}
+.revolution h4 {
+  color: #00d4ff;
+  font-size: 12pt;
+  margin: 0 0 4pt 0;
+}
+.revolution p {
+  color: #ffffff;
+  font-size: 10pt;
+  margin: 0;
+  line-height: 1.3;
+}
+.rev-points {
+  display: flex;
+  gap: 8pt;
+}
+.rev-point {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 6pt;
+  padding: 6pt 8pt;
+  text-align: center;
+}
+.rev-point p {
+  color: #b0b0b0;
+  font-size: 9pt;
+  margin: 0;
+  line-height: 1.3;
+}
+.rev-point-title {
+  color: #00d4ff;
+  font-size: 10pt;
+  font-weight: bold;
+  margin: 0 0 2pt 0;
+}
+</style>
+</head>
+<body>
+<h2>BIM vs CAD</h2>
+<h3>Why BIM Revolutionized the Construction Industry</h3>
+<div class="comparison">
+  <div class="cad-side">
+    <h4>Traditional CAD (2D/3D Drawings)</h4>
+    <p><b>Just lines and shapes</b> — no intelligence behind the geometry</p>
+    <p>Each drawing is independent — change one, manually update all others</p>
+    <p>No material data, cost info, or scheduling built in</p>
+    <p>Teams work in silos — architects, engineers use separate files</p>
+    <p>Errors found late during construction — expensive fixes</p>
+  </div>
+  <div class="bim-side">
+    <h4>BIM (Intelligent 3D Model)</h4>
+    <p><b>Smart objects</b> — a wall knows its height, material, cost, fire rating</p>
+    <p>Single source of truth — change once, updates everywhere automatically</p>
+    <p>Rich data: quantities, costs (5D), scheduling (4D), sustainability (6D)</p>
+    <p>All teams collaborate on ONE shared model in real-time</p>
+    <p>Clash detection catches conflicts BEFORE construction begins</p>
+  </div>
+</div>
+<div class="revolution">
+  <h4>Why BIM Changed Everything:</h4>
+  <p>BIM reduced construction errors by up to <b>40%</b>, cut project timelines by <b>20-30%</b>, and enabled teams across the world to collaborate on a single intelligent model instead of exchanging disconnected drawings.</p>
+</div>
+<div class="rev-points">
+  <div class="rev-point">
+    <p class="rev-point-title">4D — Time</p>
+    <p>Construction scheduling linked to model</p>
+  </div>
+  <div class="rev-point">
+    <p class="rev-point-title">5D — Cost</p>
+    <p>Real-time cost estimation from quantities</p>
+  </div>
+  <div class="rev-point">
+    <p class="rev-point-title">6D — Sustainability</p>
+    <p>Energy analysis and green building design</p>
+  </div>
+  <div class="rev-point">
+    <p class="rev-point-title">7D — Operations</p>
+    <p>Facility management and maintenance</p>
+  </div>
+</div>
+</body>
+</html>

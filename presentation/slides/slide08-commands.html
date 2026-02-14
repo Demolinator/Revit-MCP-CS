@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #0a0e27; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0; box-sizing: border-box;
+  background: #0a0e27;
+  font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+  padding: 35pt 40pt;
+}
+h2 {
+  color: #00d4ff;
+  font-size: 34pt;
+  margin: 0 0 3pt 0;
+}
+h3 {
+  color: #ffffff;
+  font-size: 18pt;
+  margin: 0 0 20pt 0;
+  opacity: 0.8;
+  font-weight: normal;
+}
+.content {
+  flex: 1;
+  display: flex;
+  gap: 20pt;
+}
+.category {
+  flex: 1;
+  background: rgba(0, 212, 255, 0.1);
+  border: 2pt solid #00d4ff;
+  border-radius: 12pt;
+  padding: 18pt;
+}
+.category h4 {
+  color: #00d4ff;
+  font-size: 18pt;
+  margin: 0 0 12pt 0;
+  text-transform: uppercase;
+  letter-spacing: 1pt;
+}
+.count-badge {
+  background: rgba(0, 212, 255, 0.2);
+  border-radius: 16pt;
+  padding: 4pt 12pt;
+  display: inline-block;
+  margin-bottom: 10pt;
+}
+.count-badge p {
+  color: #00d4ff;
+  font-size: 12pt;
+  font-weight: bold;
+  margin: 0;
+}
+.cmd-item {
+  color: #ffffff;
+  font-size: 13pt;
+  margin: 0 0 8pt 0;
+  opacity: 0.9;
+}
+.query {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #b0b0b0;
+}
+.query h4 { color: #b0b0b0; }
+.query .cmd-item { color: #b0b0b0; }
+</style>
+</head>
+<body>
+<h2>Available Tools</h2>
+<h3>19 Commands for Complete BIM Control</h3>
+<div class="content">
+  <div class="category">
+    <div class="count-badge"><p>CREATE — 6 Commands</p></div>
+    <h4>Create Elements</h4>
+    <p class="cmd-item">Walls — Straight and curved walls</p>
+    <p class="cmd-item">Floors — Floor slabs and finishes</p>
+    <p class="cmd-item">Grids — Column grids and levels</p>
+    <p class="cmd-item">Beams — Structural framing</p>
+    <p class="cmd-item">Dimensions — Automatic dimensioning</p>
+    <p class="cmd-item">Point Elements — Columns, fixtures</p>
+  </div>
+  <div class="category query">
+    <div class="count-badge"><p>QUERY — 13 Commands</p></div>
+    <h4>Analyze and Export</h4>
+    <p class="cmd-item">View Info — Active viewport data</p>
+    <p class="cmd-item">Family Types — Available components</p>
+    <p class="cmd-item">Selected Elements — Current selection</p>
+    <p class="cmd-item">Room Data — Areas and volumes</p>
+    <p class="cmd-item">Material Quantities — Takeoff data</p>
+    <p class="cmd-item">Model Statistics — Element counts</p>
+  </div>
+</div>
+</body>
+</html>

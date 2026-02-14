@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #0a0e27; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0; box-sizing: border-box;
+  background: #0a0e27;
+  font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+  padding: 28pt 35pt;
+}
+h2 {
+  color: #00d4ff;
+  font-size: 30pt;
+  margin: 0 0 2pt 0;
+}
+h3 {
+  color: #ffffff;
+  font-size: 15pt;
+  margin: 0 0 10pt 0;
+  opacity: 0.8;
+  font-weight: normal;
+}
+.content {
+  flex: 1;
+  display: flex;
+  gap: 14pt;
+}
+.left { flex: 1; display: flex; flex-direction: column; gap: 10pt; }
+.right { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.mcp-box {
+  background: rgba(0, 212, 255, 0.1);
+  border: 2pt solid #00d4ff;
+  border-radius: 8pt;
+  padding: 10pt;
+}
+.mcp-box h4 {
+  color: #00d4ff;
+  font-size: 13pt;
+  margin: 0 0 5pt 0;
+}
+.mcp-box p {
+  color: #ffffff;
+  font-size: 10pt;
+  margin: 0 0 4pt 0;
+  line-height: 1.3;
+  opacity: 0.9;
+}
+.analogy {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8pt;
+  padding: 10pt;
+}
+.analogy h4 {
+  color: #00d4ff;
+  font-size: 13pt;
+  margin: 0 0 5pt 0;
+}
+.analogy p {
+  color: #b0b0b0;
+  font-size: 10pt;
+  margin: 0 0 5pt 0;
+  line-height: 1.3;
+}
+.point {
+  color: #b0b0b0;
+  font-size: 10pt;
+  margin: 0 0 3pt 0;
+}
+</style>
+</head>
+<body>
+<h2>What is MCP?</h2>
+<h3>Model Context Protocol — The USB Port for AI</h3>
+<div class="content">
+  <div class="left">
+    <div class="mcp-box">
+      <h4>Open Standard by Anthropic</h4>
+      <p>MCP standardizes how AI applications connect to external systems. It enables secure, two-way connections between AI models like Claude and external tools.</p>
+    </div>
+    <div class="analogy">
+      <h4>The USB Analogy</h4>
+      <p>Just as <b>USB</b> lets you plug any device into your computer, <b>MCP</b> lets Claude plug in to any software tool.</p>
+      <p class="point"><b>Universal</b> — One protocol for all tools</p>
+      <p class="point"><b>Hot-Pluggable</b> — Add/remove tools dynamically</p>
+      <p class="point"><b>Standardized</b> — No custom integrations needed</p>
+    </div>
+  </div>
+  <div class="right">
+    <div class="mcp-box">
+      <h4>How It Works for Revit</h4>
+      <p>Our MCP server sits between Claude Code/Cowork and Revit, translating natural language into actual Revit API commands.</p>
+      <p class="point"><b>Tool Discovery</b> — Claude finds available Revit operations</p>
+      <p class="point"><b>Bidirectional</b> — Query data AND create elements</p>
+      <p class="point"><b>Real-Time</b> — Commands execute instantly in Revit</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

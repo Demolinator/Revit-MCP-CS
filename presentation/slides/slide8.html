@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #0D1117; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0;
+  background-image: url('../assets/gradient-bg.png');
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+.content {
+  margin: 40pt;
+  width: 100%;
+}
+.title-bar {
+  border-left: 8pt solid #00D4FF;
+  padding-left: 20pt;
+  margin: 0 0 10pt 0;
+}
+h1 {
+  color: #00D4FF;
+  font-size: 36pt;
+  font-weight: bold;
+  margin: 0;
+}
+h2 {
+  color: #ffffff;
+  font-size: 28pt;
+  font-weight: normal;
+  margin: 30pt 0 20pt 0;
+}
+.code-box {
+  background: rgba(0, 0, 0, 0.5);
+  border: 2pt solid #00D4FF;
+  border-radius: 8pt;
+  padding: 20pt;
+  margin: 20pt 0;
+}
+p {
+  color: #00D4FF;
+  font-size: 16pt;
+  font-family: Courier New, monospace;
+  margin: 8pt 0;
+  line-height: 1.6;
+}
+.instruction {
+  color: #c9d1d9;
+  font-size: 18pt;
+  font-family: Arial, sans-serif;
+  margin: 20pt 0;
+}
+</style>
+</head>
+<body>
+<div class="content">
+  <div class="title-bar">
+    <h1>Setup</h1>
+  </div>
+  <h2>Easy Setup - One Command</h2>
+  <div class="code-box">
+    <p>git clone github.com/talal/revit-mcp-setup</p>
+    <p>cd revit-mcp-setup</p>
+    <p>./setup.sh</p>
+  </div>
+  <p class="instruction">Then: Open Revit → Add-Ins → Click "MCP Switch" → Start Claude Code</p>
+</div>
+</body>
+</html>

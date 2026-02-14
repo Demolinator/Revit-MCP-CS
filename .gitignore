@@ -35,10 +35,11 @@ installers/
 revit-mcp/build/
 revit-mcp/node_modules/
 
-# Presentation build artifacts (keep only the PPTX)
+# Presentation build artifacts
 presentation/node_modules/
 presentation/assets/
-presentation/slides/
 presentation/package.json
 presentation/package-lock.json
 presentation/generate-slides.js
+presentation/*.backup.pptx
+presentation/*.pptx.backup

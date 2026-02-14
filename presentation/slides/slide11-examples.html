@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #0a0e27; }
+body {
+  width: 720pt; height: 405pt; margin: 0; padding: 0; box-sizing: border-box;
+  background: #0a0e27;
+  font-family: Arial, sans-serif;
+  display: flex; flex-direction: column;
+  padding: 28pt 35pt;
+}
+h2 {
+  color: #00d4ff;
+  font-size: 28pt;
+  margin: 0 0 2pt 0;
+}
+h3 {
+  color: #ffffff;
+  font-size: 14pt;
+  margin: 0 0 10pt 0;
+  opacity: 0.8;
+  font-weight: normal;
+}
+.example {
+  display: flex;
+  gap: 10pt;
+  margin-bottom: 8pt;
+}
+.prompt-box {
+  flex: 1.2;
+  background: #0d1117;
+  border: 2pt solid #00d4ff;
+  border-radius: 8pt;
+  padding: 8pt 10pt;
+}
+.prompt-label {
+  color: #00d4ff;
+  font-size: 9pt;
+  font-weight: bold;
+  margin: 0 0 3pt 0;
+  text-transform: uppercase;
+  letter-spacing: 1pt;
+}
+.prompt-text {
+  color: #ffffff;
+  font-size: 11pt;
+  font-family: "Courier New", monospace;
+  margin: 0;
+  line-height: 1.3;
+}
+.result-box {
+  flex: 0.8;
+  background: rgba(0, 212, 255, 0.08);
+  border-radius: 8pt;
+  padding: 8pt 10pt;
+  display: flex;
+  align-items: center;
+}
+.result-box p {
+  color: #b0b0b0;
+  font-size: 10pt;
+  margin: 0;
+  line-height: 1.3;
+}
+.arrow-mid {
+  color: #00d4ff;
+  font-size: 16pt;
+  font-weight: bold;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.bottom-note {
+  background: rgba(0, 212, 255, 0.1);
+  border: 2pt solid #00d4ff;
+  border-radius: 8pt;
+  padding: 8pt 14pt;
+  text-align: center;
+}
+.bottom-note p {
+  color: #ffffff;
+  font-size: 11pt;
+  margin: 0;
+}
+</style>
+</head>
+<body>
+<h2>Natural Language in Action</h2>
+<h3>What You Say to Claude Code/Cowork vs What Revit Does</h3>
+<div class="example">
+  <div class="prompt-box">
+    <p class="prompt-label">You Say:</p>
+    <p class="prompt-text">"Create a 10m x 8m rectangular room with 3 meter high walls"</p>
+  </div>
+  <p class="arrow-mid">&rarr;</p>
+  <div class="result-box">
+    <p><b>Revit creates:</b> 4 walls forming a 10x8m enclosure at 3m height</p>
+  </div>
+</div>
+<div class="example">
+  <div class="prompt-box">
+    <p class="prompt-label">You Say:</p>
+    <p class="prompt-text">"Add a grid system with 6 meter spacing, 3 bays in each direction"</p>
+  </div>
+  <p class="arrow-mid">&rarr;</p>
+  <div class="result-box">
+    <p><b>Revit creates:</b> 4x4 grid lines with 6m spacing and labels</p>
+  </div>
+</div>
+<div class="example">
+  <div class="prompt-box">
+    <p class="prompt-label">You Say:</p>
+    <p class="prompt-text">"What are the total floor areas and wall quantities in this model?"</p>
+  </div>
+  <p class="arrow-mid">&rarr;</p>
+  <div class="result-box">
+    <p><b>Claude returns:</b> Floor areas, wall counts, material quantities</p>
+  </div>
+</div>
+<div class="example">
+  <div class="prompt-box">
+    <p class="prompt-label">You Say:</p>
+    <p class="prompt-text">"Place steel beams along all grid intersections at level 2"</p>
+  </div>
+  <p class="arrow-mid">&rarr;</p>
+  <div class="result-box">
+    <p><b>Revit creates:</b> Structural steel beams at every grid crossing</p>
+  </div>
+</div>
+<div class="bottom-note">
+  <p><b>No Revit training needed</b> — describe what you want in plain English, Claude handles the rest</p>
+</div>
+</body>
+</html>
