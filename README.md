@@ -71,16 +71,66 @@ The MCP Server translates Claude's tool calls into TCP commands sent to a C# plu
 > What are the model statistics?
 ```
 
-## MCP Configuration
+## Setup Guide
 
-Add the Revit MCP server to your Claude Code/Cowork MCP settings:
+### Step 1: Clone and Build
+
+```bash
+git clone https://github.com/Demolinator/Revit-MCP-CS.git
+cd Revit-MCP-CS
+```
+
+**Build the MCP Server (Node.js):**
+```bash
+cd revit-mcp
+npm install
+npm run build
+cd ..
+```
+
+**Build the Revit Plugin and Command Set (Windows — PowerShell or CMD):**
+
+> Close Revit before building. DLLs are locked while Revit is running.
+
+```powershell
+cd revit-mcp-plugin
+dotnet restore revit-mcp-plugin.sln
+dotnet build revit-mcp-plugin.sln -c "Debug R26"
+
+cd ..\revit-mcp-commandset
+dotnet restore revit-mcp-commandset.sln
+dotnet build revit-mcp-commandset.sln -c "Debug R26"
+```
+
+The Debug build automatically deploys DLLs to `%APPDATA%\Autodesk\Revit\Addins\2026\`.
+
+**Install Command Registry:**
+
+Copy `commandRegistry.json` to:
+```
+%APPDATA%\Autodesk\Revit\Addins\2026\revit_mcp_plugin\Commands\commandRegistry.json
+```
+
+### Step 2: Connect Your AI Interface
+
+Choose whichever AI interface you prefer — they all connect to the same MCP server and Revit plugin.
+
+---
+
+#### Option A: Claude Desktop (Recommended for Architects)
+
+Claude Desktop is the easiest option — a visual chat interface that runs natively on Windows.
+
+1. **Install Claude Desktop** from [claude.ai/download](https://claude.ai/download)
+2. Open Claude Desktop **Settings** → **Developer** → **Edit Config**
+3. This opens `claude_desktop_config.json`. Add the Revit MCP server:
 
 ```json
 {
   "mcpServers": {
     "revit-mcp": {
       "command": "node",
-      "args": ["path/to/revit-mcp/build/index.js"],
+      "args": ["C:\\path\\to\\Revit-MCP-CS\\revit-mcp\\build\\index.js"],
       "env": {
         "REVIT_HOST": "localhost",
         "REVIT_PORT": "8080"
@@ -88,6 +138,81 @@ Add the Revit MCP server to your Claude Code/Cowork MCP settings:
     }
   }
 }
+```
+
+> **Important:** Replace `C:\\path\\to\\` with the actual path where you cloned the repo. Use double backslashes `\\` in the path.
+
+4. **Restart Claude Desktop** to load the MCP server
+5. You should see the Revit MCP tools (hammer icon) in the chat input area
+
+**Config file location:** `%APPDATA%\Claude\claude_desktop_config.json`
+
+---
+
+#### Option B: Cowork (Collaborative AI for Teams)
+
+Cowork is Anthropic's collaborative AI workspace with native MCP plugin support — ideal for architect teams.
+
+1. **Open Cowork** at [cowork.ai](https://cowork.ai) or the desktop app
+2. Go to **Settings** → **MCP Plugins**
+3. Add a new plugin with the Revit MCP server configuration:
+
+```json
+{
+  "revit-mcp": {
+    "command": "node",
+    "args": ["C:\\path\\to\\Revit-MCP-CS\\revit-mcp\\build\\index.js"],
+    "env": {
+      "REVIT_HOST": "localhost",
+      "REVIT_PORT": "8080"
+    }
+  }
+}
+```
+
+4. The Revit tools will appear automatically in your Cowork workspace
+5. All team members can share the same Revit MCP connection
+
+---
+
+#### Option C: Claude Code (CLI — for Developers)
+
+Claude Code is the terminal-based interface for developers.
+
+```bash
+# Register the MCP server with Claude Code
+claude mcp add-json revit-mcp '{
+  "type": "stdio",
+  "command": "node",
+  "args": ["C:/path/to/Revit-MCP-CS/revit-mcp/build/index.js"],
+  "env": {
+    "REVIT_HOST": "localhost",
+    "REVIT_PORT": "8080"
+  }
+}'
+```
+
+> If running Claude Code from WSL2, replace `localhost` with your WSL2 gateway IP:
+> ```bash
+> GATEWAY_IP=$(ip route show default | awk '{print $3}')
+> ```
+
+---
+
+### Step 3: Start Designing
+
+1. **Open Revit 2026** and create or open a project
+2. Go to **Add-Ins** tab → Click **"Revit MCP Switch"** (click once to turn ON)
+3. Open your AI interface (Claude Desktop, Cowork, or Claude Code)
+4. Start talking in natural language!
+
+### Step 4: Allow Firewall (if needed)
+
+If the MCP server can't connect to Revit, allow port 8080 through Windows Firewall:
+
+```powershell
+# Run as Administrator in PowerShell:
+New-NetFirewallRule -DisplayName "Revit MCP" -Direction Inbound -LocalPort 8080 -Protocol TCP -Action Allow
 ```
 
 ## Troubleshooting
