@@ -31,10 +31,9 @@ installers/
 *.0003.rvt
 *.bak
 
-# Cloned repos (setup.sh clones these automatically)
-revit-mcp/
-revit-mcp-plugin/
-revit-mcp-commandset/
+# Build artifacts inside repos
+revit-mcp/build/
+revit-mcp/node_modules/
 
 # Presentation build artifacts (keep only the PPTX)
 presentation/node_modules/

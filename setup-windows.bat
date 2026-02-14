@@ -32,8 +32,7 @@ if not errorlevel 1 (
 REM ---- Build Plugin ----
 echo [1/4] Building Revit Plugin...
 cd /d "%SCRIPT_DIR%revit-mcp-plugin"
-dotnet restore revit-mcp-plugin.sln >nul 2>&1
-dotnet build revit-mcp-plugin.sln -c "Debug R26"
+dotnet build revit-mcp-plugin.sln -c "Debug R26" --no-incremental
 if errorlevel 1 (
     echo [ERROR] Plugin build failed!
     exit /b 1
@@ -44,8 +43,7 @@ echo.
 REM ---- Build Command Set ----
 echo [2/4] Building Command Set...
 cd /d "%SCRIPT_DIR%revit-mcp-commandset"
-dotnet restore revit-mcp-commandset.sln >nul 2>&1
-dotnet build revit-mcp-commandset.sln -c "Debug R26"
+dotnet build revit-mcp-commandset.sln -c "Debug R26" --no-incremental
 if errorlevel 1 (
     echo [ERROR] CommandSet build failed!
     exit /b 1

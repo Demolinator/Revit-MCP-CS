@@ -47,29 +47,23 @@ fi
 echo "  All prerequisites found."
 echo ""
 
-# ---- Step 1: Clone repos if not present ----
-echo "[1/6] Checking repositories..."
-if [ ! -d "revit-mcp" ]; then
-    echo "  Cloning MCP Server..."
-    git clone https://github.com/mcp-servers-for-revit/revit-mcp.git
-else
-    echo "  revit-mcp/ already exists"
-fi
+# ---- Step 1: Verify bundled repositories ----
+echo "[1/6] Checking bundled repositories..."
+ALL_PRESENT=true
+for repo in revit-mcp revit-mcp-plugin revit-mcp-commandset; do
+    if [ ! -d "$SCRIPT_DIR/$repo" ]; then
+        echo "  ERROR: $repo/ directory is missing!"
+        ALL_PRESENT=false
+    else
+        echo "  [OK] $repo/"
+    fi
+done
 
-if [ ! -d "revit-mcp-plugin" ]; then
-    echo "  Cloning Revit Plugin..."
-    git clone https://github.com/mcp-servers-for-revit/revit-mcp-plugin.git
-else
-    echo "  revit-mcp-plugin/ already exists"
+if [ "$ALL_PRESENT" = false ]; then
+    echo "  The repos should be included in this repository."
+    echo "  Try: git clone https://github.com/Demolinator/Revit-MCP-CS.git"
+    exit 1
 fi
-
-if [ ! -d "revit-mcp-commandset" ]; then
-    echo "  Cloning Command Set..."
-    git clone https://github.com/mcp-servers-for-revit/revit-mcp-commandset.git
-else
-    echo "  revit-mcp-commandset/ already exists"
-fi
-echo "  Done."
 echo ""
 
 # ---- Step 2: Build MCP Server ----
