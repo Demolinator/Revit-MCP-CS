@@ -1,0 +1,118 @@
+{
+  "commands": [
+    {
+      "commandName": "get_current_view_info",
+      "description": "Get info about the active view",
+      "assemblyPath": "RevitMCPCommandSet\\2026\\RevitMCPCommandSet.dll",
+      "enabled": true
+    },
+    {
+      "commandName": "get_current_view_elements",
+      "description": "List elements in the current view",
+      "assemblyPath": "RevitMCPCommandSet\\2026\\RevitMCPCommandSet.dll",
+      "enabled": true
+    },
+    {
+      "commandName": "get_available_family_types",
+      "description": "List available family types",
+      "assemblyPath": "RevitMCPCommandSet\\2026\\RevitMCPCommandSet.dll",
+      "enabled": true
+    },
+    {
+      "commandName": "get_selected_elements",
+      "description": "Get currently selected elements",
+      "assemblyPath": "RevitMCPCommandSet\\2026\\RevitMCPCommandSet.dll",
+      "enabled": true
+    },
+    {
+      "commandName": "create_line_based_element",
+      "description": "Create walls, beams, and other line-based elements",
+      "assemblyPath": "RevitMCPCommandSet\\2026\\RevitMCPCommandSet.dll",
+      "enabled": true
+    },
+    {
+      "commandName": "create_surface_based_element",
+      "description": "Create floors, roofs, and other surface elements",
+      "assemblyPath": "RevitMCPCommandSet\\2026\\RevitMCPCommandSet.dll",
+      "enabled": true
+    },
+    {
+      "commandName": "create_point_based_element",
+      "description": "Place family instances at points",
+      "assemblyPath": "RevitMCPCommandSet\\2026\\RevitMCPCommandSet.dll",
+      "enabled": true
+    },
+    {
+      "commandName": "create_grid",
+      "description": "Create grid systems with smart spacing",
+      "assemblyPath": "RevitMCPCommandSet\\2026\\RevitMCPCommandSet.dll",
+      "enabled": true
+    },
+    {
+      "commandName": "create_structural_framing_system",
+      "description": "Create beam framing systems",
+      "assemblyPath": "RevitMCPCommandSet\\2026\\RevitMCPCommandSet.dll",
+      "enabled": true
+    },
+    {
+      "commandName": "create_dimensions",
+      "description": "Create dimension annotations",
+      "assemblyPath": "RevitMCPCommandSet\\2026\\RevitMCPCommandSet.dll",
+      "enabled": true
+    },
+    {
+      "commandName": "delete_element",
+      "description": "Delete elements by ID",
+      "assemblyPath": "RevitMCPCommandSet\\2026\\RevitMCPCommandSet.dll",
+      "enabled": true
+    },
+    {
+      "commandName": "tag_all_walls",
+      "description": "Tag all walls in the model",
+      "assemblyPath": "RevitMCPCommandSet\\2026\\RevitMCPCommandSet.dll",
+      "enabled": true
+    },
+    {
+      "commandName": "ai_element_filter",
+      "description": "Smart element filtering and querying",
+      "assemblyPath": "RevitMCPCommandSet\\2026\\RevitMCPCommandSet.dll",
+      "enabled": true
+    },
+    {
+      "commandName": "export_room_data",
+      "description": "Extract room data with areas and volumes",
+      "assemblyPath": "RevitMCPCommandSet\\2026\\RevitMCPCommandSet.dll",
+      "enabled": true
+    },
+    {
+      "commandName": "get_material_quantities",
+      "description": "Calculate material takeoffs",
+      "assemblyPath": "RevitMCPCommandSet\\2026\\RevitMCPCommandSet.dll",
+      "enabled": true
+    },
+    {
+      "commandName": "analyze_model_statistics",
+      "description": "Analyze model complexity and statistics",
+      "assemblyPath": "RevitMCPCommandSet\\2026\\RevitMCPCommandSet.dll",
+      "enabled": true
+    },
+    {
+      "commandName": "color_splash",
+      "description": "Color elements by category or parameter",
+      "assemblyPath": "RevitMCPCommandSet\\2026\\RevitMCPCommandSet.dll",
+      "enabled": true
+    },
+    {
+      "commandName": "operate_element",
+      "description": "Modify element properties",
+      "assemblyPath": "RevitMCPCommandSet\\2026\\RevitMCPCommandSet.dll",
+      "enabled": true
+    },
+    {
+      "commandName": "send_code_to_revit",
+      "description": "Execute C# code in Revit",
+      "assemblyPath": "RevitMCPCommandSet\\2026\\RevitMCPCommandSet.dll",
+      "enabled": true
+    }
+  ]
+}

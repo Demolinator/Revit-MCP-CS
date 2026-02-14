@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+build/
+
+# .NET build output
+bin/
+obj/
+*.dll
+*.pdb
+*.exe
+
+# IDE
+.vs/
+.vscode/
+*.user
+*.suo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Installers (large binaries)
+installers/
+
+# Revit backup files
+*.0001.rvt
+*.0002.rvt
+*.0003.rvt
+*.bak
