@@ -248,7 +248,6 @@ Revit-MCP/
 
 - [mcp-servers-for-revit](https://github.com/mcp-servers-for-revit) - MCP Server, Plugin, and CommandSet
 - Talal Ahmed - Revit 2026 compatibility fixes, setup automation, Cowork integration
-- Sir Zia Khan - Mentorship and vision
 
 ---
 
