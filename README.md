@@ -2,7 +2,7 @@
 
 Connect **Claude Code/Cowork** (AI) to **Autodesk Revit 2026** via the Model Context Protocol (MCP). Tell the AI what you want in plain English, and it creates walls, floors, grids, beams, and more directly in Revit.
 
-> Built by **Talal Ahmed** | Mentored by **Sir Zia Khan**
+> Built by **Talal Ahmed**
 
 ---
 
